@@ -1,7 +1,7 @@
-#The Elder Shop
+# The Elder Shop
 Online-store.
 
-##Technologies used:
+## Technologies used:
 -HTML
 -CSS
 -Normalize.css
