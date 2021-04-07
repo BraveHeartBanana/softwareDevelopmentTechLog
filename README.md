@@ -1,7 +1,9 @@
-#
-#  softwareDevelopmentTechLog
-#
-#  =================================================
-#  List for cource partcipants for previous years
-#  =================================================
-#
+#The Elder Shop
+Online-store.
+
+##Technologies used:
+-HTML
+-CSS
+-Normalize.css
+-JS
+-SVG icons
