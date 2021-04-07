@@ -2,8 +2,8 @@
 Online-store.
 
 ## Technologies used:
--HTML
--CSS
--Normalize.css
--JS
--SVG icons
+- HTML
+- CSS
+- Normalize.css
+- JS
+- SVG icons
