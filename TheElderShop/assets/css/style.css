@@ -21,7 +21,6 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
-
 /* ==========Container====== */
 .container {
     width: 100%;
@@ -38,6 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 .intro {
     height: 100%;
     width: 100%;
+    padding-top: 30px;
 
     background: url('../img/start%20bg1.jpg') center no-repeat;
     -webkit-background-size: cover;
@@ -167,7 +167,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /*Burger menu*/
-.navbar {
+.navbar__menu {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -219,10 +219,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .change .line-1 {
     transform: rotateZ(-45deg) translate(-6px, 10px);
+    background-color: #2d2d2d;
+    height: 6px;
 }
 
 .change .line-3 {
     transform: rotateZ(45deg) translate(-6px, -10px);
+    background-color: #2d2d2d;
+    height: 6px;
 }
 
 .change  .line-2 {
@@ -232,6 +236,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav__list {
     text-align: left;
+    font-family: sedan;
 }
 
 .nav__item {
@@ -281,6 +286,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .burger_nav-link--social {
     margin-right: 40px;
+}
+
+.burger_nav-link:hover {
+    text-decoration: none;
+    color: #fff;
 }
 
 .burger__social {
@@ -352,7 +362,7 @@ a:hover {
 
 /*=========Section=======*/
 .section{
-    padding-top: 30px;
+    padding: 30px 0;
     position: relative;
     width: 100%;
     display: block;
@@ -387,7 +397,6 @@ a:hover {
 .padding-tb{
   padding-top: 60px;
 }
-
 
 /*Slider*/
 [type="radio"]:checked,
@@ -762,6 +771,10 @@ a:hover {
 
 /* Footer */
 .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
     padding-top: 50px;
 
     background-color: #333;
@@ -804,7 +817,7 @@ a:hover {
 
 
 
-/*========Catalog page==========*/
+/*=======Catalog page======*/
 .card{
     position: relative;
     width: 300px;
@@ -889,10 +902,362 @@ a:hover {
    text-transform: uppercase;
 }
 
+
 /*=======Shopping cart======*/
+.armor_bg {
+    height: 100%;
+    width: 100%;
+
+    background: url('../img/armor%20bg.jpg') center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
 
 
+/* ------- Buttons ------ */
+.btn_cart {
+    padding: .65rem 1rem;
+    transition: .3s all;
+}
 
+.btn_cart--small {
+    padding: .2rem .4rem;
+}
+
+.btn_cart--primary{
+    border: 3px solid #2D2D2D;
+    border-radius: 15px;
+    background-color: #2D2D2D;
+    padding: 6px 10px;
+
+    color: #fff;
+    font-size: 15px;
+    font-family: sedan;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition: background-color .1s linear, border-color .1s linear, color .1s linear, padding .1s linear;
+}
+
+.btn_cart--primary:hover {
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    font-weight: 900;
+    color: #2D2D2D;
+    border-color: #2D2D2D;
+}
+
+.btn_cart--danger {
+    border: 3px solid #912a2a;
+    border-radius: 15px;
+    background: #912a2a;
+    padding: 6px 10px;
+
+    color: #fff;
+    font-size: 15px;
+    font-family: sedan;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition: background-color .1s linear, border-color .1s linear, color .1s linear, padding .1s linear;
+}
+
+.btn_cart--danger:hover:not(:disabled),
+.btn_cart--danger:focus {
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    color: #912a2a;
+    font-weight: 900;
+    border-color: #912a2a;
+}
+
+/* ----- Products ------ */
+.product {
+    text-align: center;
+    position: relative;
+    width: 320px;
+    height: 460px;
+
+    margin: 0 auto;
+    padding: 15px;
+    margin-bottom: 70px;
+    border-radius: 10px;
+
+    background-color: rgba(45, 45, 45, 0.4);
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+    border-left: 1px solid rgba(255, 255, 255, 0.7);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.product__name {
+    max-width: 260px;
+    margin: 0 auto;
+    padding: 5px;
+    margin-top: 15px;
+    font-size: 25px;
+    font-family: sedan;
+    color: #2d2d2d;
+    font-weight: 700;
+
+    border: 3px solid #2d2d2d;
+    background: rgba(255,255,255, 0.3);
+    border-radius: 10px;
+
+}
+
+.product__price {
+    margin: 10px 0 15px 0;
+    font-size: 20px;
+    font-family: sedan;
+    color: #2d2d2d;
+    font-weight: 700;
+}
+
+.products {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.products:first-child {
+    padding-top: 100px;;
+}
+
+.product__price:before {
+    content: '$';
+}
+
+.product__image {
+    border-radius: 10px;
+    max-width: 280px;
+    height: 280px;
+}
+
+.product__content {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.product__content:hover {
+    transform: translateY(0px);
+    opacity: 1
+}
+
+/* ------ Cart ------- */
+
+.cart {
+    display: grid;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.cart-preview_bg {
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(10px);
+
+    background: url('../img/cart%20preview%20bg.jpg') center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.cart__bg {
+    min-height: calc(100vh - 140px);
+    width: 100%;
+    overflow: hidden;
+
+    background: url('../img/cart%20bg.jpg') center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.cart h3 {
+    margin: 0;
+}
+
+.cart__item {
+    margin-bottom: 3px;
+    display: grid;
+    grid-template-columns: 2rem 7rem 3rem auto 1rem auto auto;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border: 2px dashed #2d2d2d;
+    animation: .3s add-cart-item;
+}
+
+@keyframes add-cart-item {
+  from {
+    margin-left: -200px;
+    margin-right: 200px;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0;
+    margin-right: 0;
+    opacity: 1;
+  }
+}
+
+.cart__item--removed {
+  animation: .3s remove-cart-item;
+}
+
+@keyframes remove-cart-item {
+  to {
+    margin-left: 200px;
+    margin-right: -200px;
+    opacity: 0;
+  }
+}
+
+.cart__item__image {
+  max-width: 80px;
+}
+
+@media screen and (min-width: 600px) {
+  .cart__item__image {
+    max-width: 80px;
+  }
+}
+
+.cart__item__price {
+    font-family: sedan;
+}
+
+.cart__item__name {
+    font-family: sedan;
+}
+
+.cart__item__price:before {
+    content: '$';
+    font-family: sedan;
+}
+
+.cart-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, .7);
+    cursor: wait;
+}
+
+
+.cart__preview {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 10px 0;
+
+    font-family: sedan;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    letter-spacing: 0.5rem;
+    color: black;
+
+    border: 1px solid #fff;
+    border-radius: 10px;
+    background-color: rgba(45, 45, 45, 0.3);
+    backdrop-filter: blur(30px);
+    box-shadow: 1px 3px 3px 1px rgba(0,0,0,0.3);
+}
+
+/*=======Our team======*/
+.team__cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-bottom: 120px;
+
+    transform-style: preserve-3d;
+}
+
+.box {
+    position: relative;
+    height: 530px;
+    width: 405px;
+    padding: 15px;
+
+    border-radius: 15px;;
+    background-color: rgba(45, 45, 45, 0.9);
+    transform-style: preserve-3d;
+}
+
+.box .content__box h2 {
+    font-family: sedan;
+    font-size: 28px;
+    color: #2d2d2d;
+    font-weight: 700;
+}
+
+.box .content__box p {
+    font-family: sedan;
+    font-size: 20px;
+    color: #2d2d2d;
+    font-weight: 500;
+}
+
+.box:hover {
+    box-shadow: 0 50px 80px rgba(0,0,0, 0.7);
+}
+
+.box:hover .content__box {
+    transform: translateZ(40px) scaleY(1);
+}
+
+.person__img {
+    max-height: 500px;
+    width: auto;
+}
+
+.person__img img {
+    border-radius: 15px;
+}
+
+.content__box {
+    text-align: center;
+    position: absolute;
+    top: 80%;
+    left: 75px;
+    padding: 20px 15px;
+    max-width: 250px;
+    height: auto;
+
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.7);
+
+    transform: translateZ(40px) scaleY(0);
+    transform-origin: top;
+    transition: .5s;
+    transform-style: preserve-3d;
+}
+
+.box .content__box a {
+    font-size: 20px;
+    color: #2d2d2d;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.box .content__box a:hover {
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+}
 
 /*=========Adaptation========*/
 @media (max-width: 767px) {
